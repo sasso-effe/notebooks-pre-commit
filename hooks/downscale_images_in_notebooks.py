@@ -73,8 +73,7 @@ def process_notebook(path: str, max_img_res: int, convert_to_jpg: bool) -> bool:
     return changed
 
 
-# --- SCRIPT ENTRY POINT ---
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--max-img-res", type=int, default=800, help="Resize images that have one side larger than this number."
@@ -94,3 +93,8 @@ if __name__ == "__main__":
                 continue  # Skip small notebooks
             if process_notebook(notebook, args.max_img_res, convert_to_jpg):
                 print(f"✔ Optimized images in {notebook}")
+
+
+# --- SCRIPT ENTRY POINT ---
+if __name__ == "__main__":
+    main()

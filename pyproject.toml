@@ -1,10 +1,23 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "setuptools-scm"]
+
 [project]
 name = "notebooks-pre-commit"
-version = "0.1.0"
 description = "A pre-commit hook for cleaning python notebooks."
+version = "0.2.0"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Pietro Fanti"},
+]
 requires-python = ">=3.9"
 
 dependencies = [
     "nbformat>=5.10.4",
     "pillow>=10.3.0",
 ]
+
+scripts.downscale_images_in_notebooks = "hooks.downscale_images_in_notebooks:main"
+
+[tool.setuptools.packages.find]
+where = ["hooks"]
