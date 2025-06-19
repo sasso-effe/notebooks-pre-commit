@@ -20,4 +20,4 @@ dependencies = [
 scripts.downscale_images_in_notebooks = "hooks.downscale_images_in_notebooks:main"
 
 [tool.setuptools.packages.find]
-where = ["hooks"]
+where = ["."]
