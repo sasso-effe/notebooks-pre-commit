@@ -3,3 +3,4 @@
   entry: downscale_images_in_notebooks
   language: python
   types: [jupyter]
+  pass_filenames: false
