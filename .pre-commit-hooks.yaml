@@ -1,0 +1,5 @@
+- id: downscale-notebook-images
+  name: Downscale notebook images
+  entry: hooks/downscale_images_in_notebook.py
+  language: python
+  types: [jupyter]
