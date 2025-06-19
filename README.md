@@ -1,4 +1,7 @@
 # notebooks-pre-commit
+
+[![GitHub version](https://badge.fury.io/gh/sasso-effe%2Fnotebooks-pre-commit.svg?icon=si%3Agithub)](https://badge.fury.io/gh/sasso-effe%2Fnotebooks-pre-commit)
+
 A [pre-commit](https://pre-commit.com/) hook for cleaning python notebooks.
 
 ### Images downscaling
