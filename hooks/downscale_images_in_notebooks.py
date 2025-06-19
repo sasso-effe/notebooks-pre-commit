@@ -73,6 +73,7 @@ def process_notebook(path: str, max_img_res: int, convert_to_jpg: bool) -> bool:
     return changed
 
 
+# --- SCRIPT ENTRY POINT ---
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -95,6 +96,5 @@ def main():
                 print(f"✔ Optimized images in {notebook}")
 
 
-# --- SCRIPT ENTRY POINT ---
 if __name__ == "__main__":
     main()
