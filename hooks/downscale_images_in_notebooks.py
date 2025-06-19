@@ -5,6 +5,7 @@ import base64
 import io
 import os
 import sys
+from typing import Sequence
 
 import nbformat
 from PIL import Image
@@ -74,8 +75,9 @@ def process_notebook(path: str, max_img_res: int, convert_to_jpg: bool) -> bool:
 
 
 # --- SCRIPT ENTRY POINT ---
-def main():
+def main(argv: Sequence[str] | None = None):
     parser = argparse.ArgumentParser()
+    parser.add_argument("filenames", nargs="*", help="Filenames to process.")
     parser.add_argument(
         "--max-img-res", type=int, default=800, help="Resize images that have one side larger than this number."
     )
@@ -83,7 +85,7 @@ def main():
         "--max-file-size", type=int, default=512, help="Ignore notebooks smaller than this size (in KB)."
     )
     parser.add_argument("--keep-png", action="store_true", help="Prevent from converting png to jpg.")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     max_file_size = args.max_file_size * 1024
     convert_to_jpg = not args.keep_png
 

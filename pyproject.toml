@@ -5,7 +5,7 @@ requires = ["setuptools", "setuptools-scm"]
 [project]
 name = "notebooks-pre-commit"
 description = "A pre-commit hook for cleaning python notebooks."
-version = "0.2.1"
+version = "0.2.2"
 license = {file = "LICENSE"}
 authors = [
   {name = "Pietro Fanti"},
