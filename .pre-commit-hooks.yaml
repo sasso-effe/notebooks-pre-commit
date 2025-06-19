@@ -3,3 +3,4 @@
   entry: hooks/downscale_images_in_notebooks.py
   language: python
   types: [jupyter]
+  additional_dependencies: [nbformat>=5.10.4, pillow>=10.3.0]
